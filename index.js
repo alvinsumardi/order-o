@@ -9,8 +9,18 @@ document.addEventListener ('click', function(e) {
     if(e.target.dataset.menuId){
         handleAddClick(e.target.dataset.menuId)
     }
-    if(e.target.dataset.orderItemId){
+    
+    else if(e.target.dataset.orderItemId){
         handleRemoveClick(e.target.dataset.orderItemId)
+    }
+
+    else if(e.target.id == 'complete-order'){
+        handleCompleteOrder()
+    }
+    else if(e.target.id == 'field-card-pay'){
+        preventDefaultFunction(e)
+        handleFieldCardPay()
+
     }
 })
 
@@ -45,8 +55,23 @@ function handleRemoveClick(orderItemId){
 
 }
 
+function handleCompleteOrder(){
+    document.getElementById('payment-popup').classList.toggle('setting-hide')
+}
+
+function handleFieldCardPay(){
+    document.getElementById('payment-popup').classList.toggle('setting-hide')
+    document.getElementById('order-section').innerHTML = `<div class="success-message">
+            Thanks, James! Your order is on its way!
+        </div>`
+}
+
 function randomNumber(){
     return Math.floor(Math.random()*999999999999)
+}
+
+function preventDefaultFunction(e){
+    e.preventDefault()
 }
 
 
@@ -100,9 +125,9 @@ function renderOrder() {
 
 
     if(orderArray.length){
-        document.getElementById('order-section').style.display = 'block'
+        document.getElementById('order-section').classList.remove('setting-hide')
     } else {
-        document.getElementById('order-section').style.display = 'none'
+        document.getElementById('order-section').classList.add('setting-hide')
 
     }
     

@@ -178,8 +178,18 @@ footer h2 {
 
 input {
     height: 75px;
+    width: 100%;
     padding: 20px;
     font-size: 20px;
+    margin-top: 20px;
+}
+
+.success-message {
+    width: 100%;
+    padding: 50px;
+    font-size: 32;
+    background-color: #ECFDF5;
+    color: #065F46;
 }
 
 input::-webkit-outer-spin-button,
@@ -192,4 +202,8 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield; /* Firefox */
     appearance: textfield;
+}
+
+.setting-hide{
+    display: none;
 }

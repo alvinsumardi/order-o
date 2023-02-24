@@ -12,7 +12,7 @@
         </header>
         <main class="container" id="item-list">
         </main>
-        <footer class="container" id="order-section" style="display: none;">
+        <footer class="container" id="order-section" class="setting-hide">
             <h2>Your order</h2>
             <div id="order-list">
             </div>
@@ -25,14 +25,18 @@
 
             </div>
             <button id="complete-order" class="big-button">Complete order</button>
+
+            
             
         </footer>
-        <div id="payment-popup">
+        <div id="payment-popup" class="setting-hide">
             <h2>Enter card details</h2>
-            <input type="text" id="field-card-name" name="field-card-name" placeholder="Enter your name" />
-            <input type="number" id="field-card-number" name="field-card-number" placeholder="Enter card number" />
-            <input type="number" id="field-card-cvv" name="field-card-cvv" placeholder="Enter CVV" />
-            <button id="field-card-pay" class="big-button">Pay</button>
+            <form>
+                <input type="text" id="field-card-name" name="field-card-name" placeholder="Enter your name" required />
+                <input type="number" id="field-card-number" name="field-card-number" placeholder="Enter card number" required />
+                <input type="number" id="field-card-cvv" name="field-card-cvv" placeholder="Enter CVV" required />
+                <button id="field-card-pay" class="big-button">Pay</button>
+            </form>
         </div>
 	<script src="index.js" type="module"></script>
     </body>
