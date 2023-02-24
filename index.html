@@ -1,9 +1,40 @@
 <html>
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-       <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap" rel="stylesheet">
     </head>
     <body>
-	<script src="index.js"></script>
+        <header class="container">
+            <h1>Jimmy's Diner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </header>
+        <main class="container" id="item-list">
+        </main>
+        <footer class="container" id="order-section" style="display: none;">
+            <h2>Your order</h2>
+            <div id="order-list">
+            </div>
+            <hr />
+            <div>
+                <div class="order-item">
+                    <h3>Total price:</h3>
+                    <p class="price" id="total-price">$0</p>
+                </div>
+
+            </div>
+            <button id="complete-order" class="big-button">Complete order</button>
+            
+        </footer>
+        <div id="payment-popup">
+            <h2>Enter card details</h2>
+            <input type="text" id="field-card-name" name="field-card-name" placeholder="Enter your name" />
+            <input type="number" id="field-card-number" name="field-card-number" placeholder="Enter card number" />
+            <input type="number" id="field-card-cvv" name="field-card-cvv" placeholder="Enter CVV" />
+            <button id="field-card-pay" class="big-button">Pay</button>
+        </div>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 

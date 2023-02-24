@@ -1,3 +1,195 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
 body {
     margin: 0;
+    font-family: 'Smythe', cursive;
+}
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    background-image: url('./images/bg-img.png');
+    background-size: cover;
+    color: white;
+    padding: 46px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+
+main {
+    padding: 67px 46px 46px;
+    background-color: #fafafa;
+}
+
+main *:first-child {
+    padding-top: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: #d2d2d2 solid 1px;
+    padding: 50px 0;
+}
+
+.item *:first-child {
+    flex-grow: 1;
+    font-size: 80px;
+}
+
+.item *:nth-child(2) {
+    flex-grow: 4;
+}
+
+.item *:nth-child(2) * {
+    margin-bottom: 8px;
+}
+
+.item *:nth-child(2) h3 {
+    font-size: 28px;
+}
+
+.item *:nth-child(2) .subtitle {
+    font-size: 16px;
+    color: #8b8b8b;
+}
+
+.item *:nth-child(2) .price {
+    font-size: 20px;
 } 
+
+
+.item *:nth-child(3) a {
+    font-family: 'inter', sans-serif;
+    font-size: 32px;
+    padding: 12px 20px;
+    border: 1px solid #dedede;
+    border-radius: 100%;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+}
+
+
+footer {
+    padding: 46px;
+    background-color: #fafafa;
+}
+
+footer h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.order-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.order-item:first-child {
+    margin-top: 20px;
+}
+
+.order-item:last-child {
+    margin-bottom: 20px;
+}
+
+.order-item h3 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+#order-list .order-item h3::after {
+    content: 'remove';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #bbbbbb;
+    margin-left: 12px;
+
+}
+
+.order-item p {
+    font-size: 20px;
+}
+
+.big-button {
+    color: white;
+    width: 100%;
+    padding: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #16DB99;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0px;
+}
+
+
+#payment-popup {
+    width: 80vw;
+    max-width: 500px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    padding: 24px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#payment-popup > * {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+#payment-popup h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#payment-popup button {
+    margin-top: 40px;
+    font-size: larger;
+}
+
+input {
+    height: 75px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield;
+}
